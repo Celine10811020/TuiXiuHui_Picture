@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <title>同工退休會</title>
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1 align="center"> 2024.08.17~2028.08.18 高衛同工退休會 </h1>
+
+  <header>
+    <select class="date" id="date">
+      <option value="0">日期</option>
+      <option value="1">2024.08.17</option>
+      <option value="2">2024.08.18</option>
+    </select>
+
+    <button class="start"> 開始 </button>
+    <button class="previous"> 前一張 </button>
+    <button class="next"> 下一張 </button>
+  </header>
+
+  <main>
+    <img class="image" id="image"></img>
+    <br>
+    <h2 id="title" align="center"></h3>
+    <h3 id="descript"></h3>
+  </main>
+
+</body>
+
+<script src="main.js"></script>
+<script src="database.js"></script>
+<script>
+  $(document).bind("contextmenu copy selectstart", function() {
+    return false;
+  });
+</script>
+
+</html>
